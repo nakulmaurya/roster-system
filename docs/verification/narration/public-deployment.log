@@ -1,0 +1,4 @@
+active
+Public HTTPS narrated video download matches local release bytes.
+Restart probe passed: server session, revision and saved data survived application restart.
+Video stream SHA-256 unchanged; only narration added.

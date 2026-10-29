@@ -1,0 +1,92 @@
+[
+  {
+    "start": 0,
+    "end": 12,
+    "text": "Roster Studio | A real, database-backed operations planning workspace.",
+    "narration": "Welcome to Roster Studio, a planning workspace for Data Straw. Let's see how it schedules people, checks coverage, and responds when availability changes."
+  },
+  {
+    "start": 12.005,
+    "end": 32.005,
+    "text": "Try demo creates an isolated PostgreSQL workspace with 30 fictional employees.",
+    "narration": "Starting the interactive demo creates an isolated database workspace with thirty fictional employees. Generating a roster checks the configured rules, preserves pinned assignments, and reports any coverage that still needs attention."
+  },
+  {
+    "start": 32.007,
+    "end": 48.007,
+    "text": "Calendars are month-aware: February 2028 includes leap day.",
+    "narration": "Rosters are organized by month, with separate drafts preserved when we switch periods. Here, February twenty twenty eight includes leap day. The monthly view adapts to the actual calendar, rather than assuming thirty days."
+  },
+  {
+    "start": 48.009,
+    "end": 64.009,
+    "text": "Brand view distinguishes operating calendars from employee schedules.",
+    "narration": "Back in November, the weekly brand view makes the schedule easier to read. Each service has its own operating calendar and staffing requirement. A client's working days are separate from an employee's days off."
+  },
+  {
+    "start": 64.009,
+    "end": 78.009,
+    "text": "Person view shows working days, time off and individual allocation.",
+    "narration": "The person view shows individual working days and time off. This gives managers another way to check the plan, instead of relying only on brand coverage totals."
+  },
+  {
+    "start": 78.012,
+    "end": 90.012,
+    "text": "Pod view groups resources under operational leads.",
+    "narration": "The pod view places the same work in its operational team context. Managers can filter by pod while keeping the underlying schedule consistent across views."
+  },
+  {
+    "start": 90.014,
+    "end": 106.014,
+    "text": "Process view includes bundled services that cover that process.",
+    "narration": "The process view lets us inspect a particular kind of work. Selecting non delivery report management also includes services where that process is explicitly part of a compatible bundle."
+  },
+  {
+    "start": 106.016,
+    "end": 124.016,
+    "text": "Eligibility is explicit. The scheduler never invents authorization.",
+    "narration": "Eligibility is an authorization, not a scheduling guess. Managers specify who can cover each service and whether that person is primary or backup. Adding an employee does not automatically grant permission to cover every brand."
+  },
+  {
+    "start": 124.02,
+    "end": 142.01999999999998,
+    "text": "Services expose operating calendars, staffing, timed shifts and timezone.",
+    "narration": "Service settings expose operating calendars, minimum distinct staff, and capacity. They also define shift start and end times and timezone. Overnight duties and incompatible overlaps are checked against the actual configured intervals."
+  },
+  {
+    "start": 142.024,
+    "end": 158.024,
+    "text": "Catalog management supports people, brands, processes, pods and leads.",
+    "narration": "The catalog supports people, brands, processes, pods, and team leads. Changes apply to the active month's configuration. Reference checks prevent unsafe deletion, and published snapshots remain part of the history."
+  },
+  {
+    "start": 158.027,
+    "end": 174.027,
+    "text": "Simulate a real sole-primary absence after generation.",
+    "narration": "Here, we simulate sick leave for a brand's sole primary employee. Affected unlocked work is removed and coverage is rechecked. Pinned assignments are preserved so any conflict remains visible for review."
+  },
+  {
+    "start": 174.03,
+    "end": 192.03,
+    "text": "Coverage is revalidated immediately. Mandatory gaps block publication.",
+    "narration": "The monthly review now shows two mandatory coverage gaps. Each issue identifies the service and date involved. Publishing stays blocked until mandatory issues are resolved, while preference notices are tracked separately."
+  },
+  {
+    "start": 192.036,
+    "end": 210.036,
+    "text": "The assignment inspector explains eligibility and available replacements.",
+    "narration": "Opening the assignment inspector shows the affected shift and its coverage shortfall. In this case, there are no eligible replacements available without violating the configured candidate checks. The manager can see that limitation clearly."
+  },
+  {
+    "start": 210.044,
+    "end": 224.044,
+    "text": "Humans authorize changes; automatic repair uses eligible resources only.",
+    "narration": "No safe replacement is available. Automatic repair keeps the gap visible. A manager must resolve it without bypassing mandatory rules."
+  },
+  {
+    "start": 224.049,
+    "end": 236.049,
+    "text": "Assessment demo | Server persistence, validated changes, explicit limitations.",
+    "narration": "Drafts and published snapshots are stored in Postgres. The engine explains conflicts, without claiming optimal scheduling or labor law certification."
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "release": "0.4.0",
+  "runtime_source_sha256_manifest": "bb3b52fb5b2539805b7d71f4335f20493add10f40c262d8ab7355ebfacf4344a",
+  "unit_integration_tests_passed": 213,
+  "test_files": 14,
+  "public_https_browser_tests_passed": 27,
+  "app_process_restart": "passed",
+  "postgresql_cluster_restart": "passed; same application PID",
+  "backup_restore": "passed; disposable database29 workspaces; local daily timer",
+  "public_url": "https://thank-consumption-motivation-seniors.trycloudflare.com",
+  "hosting": "temporary Cloudflare Quick Tunnel; no SLA",
+  "submission": "GitHub and applicant LinkedIn outstanding; no email sent",
+  "video": "public/walkthrough.mp4;236.2seconds; captioned real application",
+  "not_certified": [
+    "enterprise readiness",
+    "labor-law compliance",
+    "complete security or accessibility",
+    "future uptime",
+    "optimal scheduling"
+  ],
+  "narration_follow_up": {
+    "artifact": "public/walkthrough-narrated.mp4",
+    "model": "Kokoro-82M v1.0 via kokoro-onnx0.6.1",
+    "voice": "af_heart",
+    "inference": "local VM CPU; no hosted API",
+    "scenes": 15,
+    "speed": 1.0,
+    "duration_seconds": 236.2,
+    "technical_validation": "decode, timing, levels, identical video stream, external bytes, browser audio decode passed",
+    "listening_review": "user auditions supplied; no independent human ranking",
+    "core_application_source_changed": false
+  },
+  "repository_delivery": {
+    "url": "https://github.com/nakulmaurya/roster-system",
+    "visibility": "public",
+    "hosted_ci": "not enabled; workflow omitted from assessment publication",
+    "history": "clean assessment root; original local history retained as archive/with-ci"
+  }
+}

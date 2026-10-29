@@ -1,0 +1,128 @@
+
+> datastraw-roster-system@0.4.0 check
+> npm run lint && npm run typecheck && npm test && npm run build
+
+
+> datastraw-roster-system@0.4.0 lint
+> eslint src
+
+
+> datastraw-roster-system@0.4.0 typecheck
+> tsc --noEmit
+
+
+> datastraw-roster-system@0.4.0 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.0.5 [39m[90m/data/roster-improvement[39m
+
+ [32m✓[39m src/server/backend.test.ts [2m([22m[2m17 tests[22m[2m)[22m[33m 23367[2mms[22m[39m
+   [32m✓[39m central PostgreSQL API security and persistence [2m(15)[22m
+     [33m[2m✓[22m[39m sets HttpOnly SameSite cookies; production HTTPS is Secure[33m 995[2mms[22m[39m
+     [33m[2m✓[22m[39m viewer can read but write/publish fail on server[33m 972[2mms[22m[39m
+     [33m[2m✓[22m[39m commits under DB revision CAS and rejects stale writes[33m 1877[2mms[22m[39m
+     [33m[2m✓[22m[39m serializes concurrent writers: exactly one succeeds[33m 1486[2mms[22m[39m
+     [33m[2m✓[22m[39m isolates independent demos and the real workspace, ignoring client scope injection[33m 1618[2mms[22m[39m
+     [33m[2m✓[22m[39m never trusts client publication flags; independently blocks invalid publish[33m 2799[2mms[22m[39m
+     [33m[2m✓[22m[39m publishes with server audit/timestamp; rejects history edits and preserves snapshots across edits[33m 1764[2mms[22m[39m
+     [33m[2m✓[22m[39m does not downgrade unchanged publication due to PostgreSQL JSONB key order[33m 879[2mms[22m[39m
+     [33m[2m✓[22m[39m retains database state and sessions across a connection-pool restart[33m 877[2mms[22m[39m
+     [33m[2m✓[22m[39m rotation/logout revokes server-side session and expiry rejects access[33m 2180[2mms[22m[39m
+     [33m[2m✓[22m[39m demo reuse does not allocate extra workspaces; cap/rate fail closed[33m 681[2mms[22m[39m
+     [33m[2m✓[22m[39m cleans expired demo publications safely via FK cascade; never real workspaces[33m 1766[2mms[22m[39m
+ [32m✓[39m src/domain/roster/__tests__/engineering-regressions.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 13985[2mms[22m[39m
+   [32m✓[39m Engineering-manager release regressions [2m(5)[22m
+     [33m[2m✓[22m[39m rejects malformed holiday edits atomically, with no partially committed dataset[33m 2989[2mms[22m[39m
+     [33m[2m✓[22m[39m rejects overlapping process ownership through bundle edits atomically[33m 1585[2mms[22m[39m
+     [33m[2m✓[22m[39m returns detached read snapshots, including historical allocations[33m 3143[2mms[22m[39m
+     [33m[2m✓[22m[39m returns detached command results as well as reads[33m 2107[2mms[22m[39m
+     [33m[2m✓[22m[39m retains soft preference notices after harmless edits and backup roundtrip[33m 1274[2mms[22m[39m
+   [33m[2m✓[22m[39m does not retain caller-owned period objects during creation or month changes[33m 2883[2mms[22m[39m
+ [32m✓[39m src/domain/roster/__tests__/qa-review.test.ts [2m([22m[2m20 tests[22m[2m)[22m[33m 9456[2mms[22m[39m
+   [32m✓[39m Independent service QA: unmet acceptance / reproducible defects [2m(7)[22m
+     [33m[2m✓[22m[39m QA-08 a valid library must roundtrip after 101 normal publications[33m 7543[2mms[22m[39m
+   [32m✓[39m Independent service QA: documented limits and scoped reset [2m(2)[22m
+     [33m[2m✓[22m[39m reset affects only the active month; other month drafts are retained[33m 744[2mms[22m[39m
+[90mstdout[2m | src/core/engine/__tests__/stress-review.test.ts[2m > [22m[2mstress review: determinism, timeout and larger datasets[2m > [22m[2mbenchmarks 30 resources and proportionate monthly demand
+[22m[39mBENCH resources=30 slots=300 allocations=300 elapsedMs=373.3 status=FEASIBLE timedOut=false
+
+[90mstdout[2m | src/core/engine/__tests__/stress-review.test.ts[2m > [22m[2mstress review: determinism, timeout and larger datasets[2m > [22m[2mbenchmarks 60 resources and proportionate monthly demand
+[22m[39mBENCH resources=60 slots=600 allocations=600 elapsedMs=1147.2 status=FEASIBLE timedOut=false
+
+[90mstdout[2m | src/core/engine/__tests__/stress-review.test.ts[2m > [22m[2mstress review: determinism, timeout and larger datasets[2m > [22m[2mbenchmarks 120 resources and proportionate monthly demand
+[22m[39mBENCH resources=120 slots=1200 allocations=770 elapsedMs=5186.8 status=TIMEOUT_PARTIAL timedOut=true
+
+ [32m✓[39m src/core/engine/__tests__/stress-review.test.ts [2m([22m[2m44 tests[22m[2m)[22m[33m 6790[2mms[22m[39m
+   [32m✓[39m stress review: determinism, timeout and larger datasets [2m(6)[22m
+     [33m[2m✓[22m[39m benchmarks 30 resources and proportionate monthly demand[33m 376[2mms[22m[39m
+     [33m[2m✓[22m[39m benchmarks 60 resources and proportionate monthly demand[33m 1150[2mms[22m[39m
+     [33m[2m✓[22m[39m benchmarks 120 resources and proportionate monthly demand[33m 5190[2mms[22m[39m
+ [32m✓[39m src/domain/roster/__tests__/full-dataset.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 1057[2mms[22m[39m
+   [32m✓[39m DATASTRAW 30-Employee, 20-Brand Full November 2026 Roster Lifecycle [2m(2)[22m
+     [33m[2m✓[22m[39m 1. Generates pristine baseline roster with 100% coverage and zero blockers[33m 618[2mms[22m[39m
+     [33m[2m✓[22m[39m 2. Demonstrates Post-Generation Change: Sole Primary takes emergency leave -> gap flagged -> repair suggested -> gap resolved[33m 436[2mms[22m[39m
+ [32m✓[39m src/domain/roster/__tests__/scheduling-history.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 857[2mms[22m[39m
+ [32m✓[39m src/domain/roster/__tests__/management.test.ts [2m([22m[2m40 tests[22m[2m)[22m[33m 697[2mms[22m[39m
+ [32m✓[39m src/core/engine/__tests__/assessment-qa.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 96[2mms[22m[39m
+ [32m✓[39m src/core/engine/__tests__/integrity.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 86[2mms[22m[39m
+ [32m✓[39m src/core/engine/__tests__/engine.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 75[2mms[22m[39m
+ [32m✓[39m src/core/engine/__tests__/volunteer-shift.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 58[2mms[22m[39m
+ [32m✓[39m src/core/engine/__tests__/calendar-expander.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m src/server/database-pool.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/domain/roster/__tests__/workspace.test.ts [2m([22m[2m18 tests[22m[2m)[22m[33m 66902[2mms[22m[39m
+   [32m✓[39m Dynamic roster configuration and safe workspace lifecycle [2m(18)[22m
+     [33m[2m✓[22m[39m validates month rather than silently rolling 13 into the next year[33m 1825[2mms[22m[39m
+     [33m[2m✓[22m[39m uses all 31 selected-month dates in CSV[33m 2307[2mms[22m[39m
+     [33m[2m✓[22m[39m preserves month-specific edits when switching back[33m 4748[2mms[22m[39m
+     [33m[2m✓[22m[39m does not automatically authorize new employees for all brands[33m 3801[2mms[22m[39m
+     [33m[2m✓[22m[39m does not automatically authorize relief employees for a new brand[33m 3580[2mms[22m[39m
+     [33m[2m✓[22m[39m revalidates revoked eligibility without silently deleting work[33m 2539[2mms[22m[39m
+     [33m[2m✓[22m[39m records removals in the draft diff[33m 2678[2mms[22m[39m
+     [33m[2m✓[22m[39m removes unavailable unlocked work and updates off-day records[33m 3094[2mms[22m[39m
+     [33m[2m✓[22m[39m deduplicates leave and allows cancellation[33m 7056[2mms[22m[39m
+     [33m[2m✓[22m[39m preserves published snapshots when the draft changes[33m 7456[2mms[22m[39m
+     [33m[2m✓[22m[39m does not trust stale violation state during publication[33m 4333[2mms[22m[39m
+     [33m[2m✓[22m[39m supports operating and staffing overrides through the adapter[33m 3481[2mms[22m[39m
+     [33m[2m✓[22m[39m rejects invalid solver settings before mutating them[33m 2340[2mms[22m[39m
+     [33m[2m✓[22m[39m rejects broken configuration relationships[33m 2634[2mms[22m[39m
+     [33m[2m✓[22m[39m round-trips backup data and rebuilds validation instead of trusting stored metrics[33m 6044[2mms[22m[39m
+     [33m[2m✓[22m[39m rejects corrupt backups atomically[33m 3123[2mms[22m[39m
+     [33m[2m✓[22m[39m escapes quotes and neutralizes spreadsheet formulas in CSV[33m 3074[2mms[22m[39m
+     [33m[2m✓[22m[39m updates priority when an existing eligibility role changes[33m 2781[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m14 passed[39m[22m[90m (14)[39m
+[2m      Tests [22m [1m[32m213 passed[39m[22m[90m (213)[39m
+[2m   Start at [22m 17:06:08
+[2m   Duration [22m 67.69s[2m (tests 99%, import 1%)[22m
+
+
+> datastraw-roster-system@0.4.0 build
+> next build --webpack
+
+▲ Next.js 16.4.3 (webpack)
+✓ Running next.config.ts took 48ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 11.6s
+  Running TypeScript ...
+  Finished TypeScript in 5.0s ...
+  Collecting page data using 1 worker ...
+  Generating static pages using 1 worker (0/4) ...
+  Generating static pages using 1 worker (1/4)
+  Generating static pages using 1 worker (2/4)
+  Generating static pages using 1 worker (3/4)
+✓ Generating static pages using 1 worker (4/4) in 417ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/demo
+├ ƒ /api/session
+└ ƒ /api/workspace
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

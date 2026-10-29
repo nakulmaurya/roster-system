@@ -1,0 +1,18 @@
+[Unit]
+Description=Roster private local PostgreSQL backup
+After=postgresql@17-main.service
+[Service]
+Type=oneshot
+User=rosterapp
+Group=rosterapp
+EnvironmentFile=/etc/roster/production.env
+Environment=ROSTER_BACKUP_DIR=/var/backups/roster
+WorkingDirectory=/opt/roster/releases/v0.4.0
+ExecStartPre=/opt/roster/runtime/bin/node scripts/roster-cleanup.mjs
+ExecStart=/opt/roster/runtime/bin/node scripts/roster-backup.mjs
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadWritePaths=/var/backups/roster
+UMask=0077

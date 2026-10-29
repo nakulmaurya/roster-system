@@ -1,0 +1,97 @@
+
+> datastraw-roster-system@0.3.0 check
+> npm run lint && npm run typecheck && npm test && npm run build
+
+
+> datastraw-roster-system@0.3.0 lint
+> eslint src
+
+
+> datastraw-roster-system@0.3.0 typecheck
+> tsc --noEmit
+
+
+> datastraw-roster-system@0.3.0 test
+> vitest run
+
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - `__dirname` (vitest.config.mts:7:25). Use `import.meta.dirname` instead
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+ RUN  v5.0.5 /vercel/sandbox/data/roster-improvement
+
+ ✓ src/domain/roster/__tests__/workspace.test.ts (18 tests) 7584ms
+   ✓ Dynamic roster configuration and safe workspace lifecycle (18)
+     ✓ uses all 31 selected-month dates in CSV 386ms
+     ✓ preserves month-specific edits when switching back 599ms
+     ✓ does not automatically authorize new employees for all brands 499ms
+     ✓ does not automatically authorize relief employees for a new brand 444ms
+     ✓ revalidates revoked eligibility without silently deleting work 423ms
+     ✓ records removals in the draft diff 313ms
+     ✓ removes unavailable unlocked work and updates off-day records 321ms
+     ✓ deduplicates leave and allows cancellation 444ms
+     ✓ preserves published snapshots when the draft changes 667ms
+     ✓ does not trust stale violation state during publication 386ms
+     ✓ supports operating and staffing overrides through the adapter 313ms
+     ✓ round-trips backup data and rebuilds validation instead of trusting stored metrics 481ms
+     ✓ rejects corrupt backups atomically 460ms
+     ✓ escapes quotes and neutralizes spreadsheet formulas in CSV 718ms
+     ✓ updates priority when an existing eligibility role changes 438ms
+ ✓ src/domain/roster/__tests__/qa-review.test.ts (20 tests) 4267ms
+   ✓ Independent service QA: unmet acceptance / reproducible defects (7)
+     ✓ QA-08 a valid library must roundtrip after 101 normal publications 3555ms
+ ✓ src/domain/roster/__tests__/engineering-regressions.test.ts (6 tests) 1738ms
+   ✓ Engineering-manager release regressions (5)
+     ✓ rejects malformed holiday edits atomically, with no partially committed dataset 475ms
+     ✓ returns detached read snapshots, including historical allocations 307ms
+   ✓ does not retain caller-owned period objects during creation or month changes 365ms
+stdout | src/core/engine/__tests__/stress-review.test.ts > stress review: determinism, timeout and larger datasets > benchmarks 30 resources and proportionate monthly demand
+BENCH resources=30 slots=300 allocations=300 elapsedMs=83.1 status=FEASIBLE timedOut=false
+
+stdout | src/core/engine/__tests__/stress-review.test.ts > stress review: determinism, timeout and larger datasets > benchmarks 60 resources and proportionate monthly demand
+BENCH resources=60 slots=600 allocations=600 elapsedMs=253.0 status=FEASIBLE timedOut=false
+
+stdout | src/core/engine/__tests__/stress-review.test.ts > stress review: determinism, timeout and larger datasets > benchmarks 120 resources and proportionate monthly demand
+BENCH resources=120 slots=1200 allocations=1200 elapsedMs=891.3 status=FEASIBLE timedOut=false
+
+ ✓ src/core/engine/__tests__/stress-review.test.ts (44 tests) 1275ms
+   ✓ stress review: determinism, timeout and larger datasets (6)
+     ✓ benchmarks 120 resources and proportionate monthly demand 894ms
+ ✓ src/domain/roster/__tests__/full-dataset.test.ts (2 tests) 190ms
+ ✓ src/core/engine/__tests__/integrity.test.ts (24 tests) 29ms
+ ✓ src/core/engine/__tests__/engine.test.ts (8 tests) 26ms
+ ✓ src/core/engine/__tests__/volunteer-shift.test.ts (1 test) 20ms
+ ✓ src/core/engine/__tests__/calendar-expander.test.ts (4 tests) 10ms
+
+ Test Files  9 passed (9)
+      Tests  127 passed (127)
+   Start at  04:43:55
+   Duration  16.68s (tests 97%, import 2%)
+
+    Isolate  9 workers spawned · ~110ms startup each (spawn + environment, per file)
+             at least ~878ms faster with isolate: false — reuses workers across files instead of one per file
+
+
+> datastraw-roster-system@0.3.0 build
+> next build --webpack
+
+▲ Next.js 16.4.3 (webpack)
+✓ Running next.config.ts took 43ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 6.1s
+  Running TypeScript ...
+  Finished TypeScript in 3.8s ...
+  Collecting page data using 1 worker ...
+  Generating static pages using 1 worker (0/3) ...
+✓ Generating static pages using 1 worker (3/3) in 332ms
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+

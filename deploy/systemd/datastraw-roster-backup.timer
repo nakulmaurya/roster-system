@@ -1,0 +1,8 @@
+[Unit]
+Description=Daily roster backup timer
+[Timer]
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=300
+[Install]
+WantedBy=timers.target

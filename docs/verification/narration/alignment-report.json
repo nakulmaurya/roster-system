@@ -1,0 +1,144 @@
+{
+  "sample_rate": 24000,
+  "scenes": [
+    {
+      "scene": 1,
+      "start": 0.7,
+      "end": 10.443291666666665,
+      "original_seconds": 9.743291666666666,
+      "tempo_factor": 1.0,
+      "peak": 0.42388916015625,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 2,
+      "start": 12.705,
+      "end": 27.370333333333335,
+      "original_seconds": 14.665333333333333,
+      "tempo_factor": 1.0,
+      "peak": 0.473876953125,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 3,
+      "start": 32.707,
+      "end": 46.422333333333334,
+      "original_seconds": 13.715333333333334,
+      "tempo_factor": 1.0,
+      "peak": 0.491119384765625,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 4,
+      "start": 48.709,
+      "end": 61.656333333333336,
+      "original_seconds": 12.947333333333333,
+      "tempo_factor": 1.0,
+      "peak": 0.40435791015625,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 5,
+      "start": 64.709,
+      "end": 74.85300000000001,
+      "original_seconds": 10.144,
+      "tempo_factor": 1.0,
+      "peak": 0.37908935546875,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 6,
+      "start": 78.712,
+      "end": 88.83333333333334,
+      "original_seconds": 10.121333333333334,
+      "tempo_factor": 1.0,
+      "peak": 0.509033203125,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 7,
+      "start": 90.714,
+      "end": 103.14066666666666,
+      "original_seconds": 12.426666666666666,
+      "tempo_factor": 1.0,
+      "peak": 0.463775634765625,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 8,
+      "start": 106.71600000000001,
+      "end": 121.62866666666667,
+      "original_seconds": 14.912666666666667,
+      "tempo_factor": 1.0,
+      "peak": 0.433502197265625,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 9,
+      "start": 124.72,
+      "end": 140.41933333333333,
+      "original_seconds": 15.699333333333334,
+      "tempo_factor": 1.0,
+      "peak": 0.48468017578125,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 10,
+      "start": 142.724,
+      "end": 157.04266666666666,
+      "original_seconds": 14.318666666666667,
+      "tempo_factor": 1.0,
+      "peak": 0.5020751953125,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 11,
+      "start": 158.72699999999998,
+      "end": 171.8889583333333,
+      "original_seconds": 13.161958333333333,
+      "tempo_factor": 1.0,
+      "peak": 0.413970947265625,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 12,
+      "start": 174.73,
+      "end": 188.77666666666664,
+      "original_seconds": 14.046666666666667,
+      "tempo_factor": 1.0,
+      "peak": 0.486053466796875,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 13,
+      "start": 192.736,
+      "end": 207.81933333333333,
+      "original_seconds": 15.083333333333334,
+      "tempo_factor": 1.0,
+      "peak": 0.446380615234375,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 14,
+      "start": 210.744,
+      "end": 219.74466666666666,
+      "original_seconds": 9.000666666666667,
+      "tempo_factor": 1.0,
+      "peak": 0.382659912109375,
+      "saturated_sample_fraction": 0.0
+    },
+    {
+      "scene": 15,
+      "start": 224.749,
+      "end": 234.35966666666667,
+      "original_seconds": 9.610666666666667,
+      "tempo_factor": 1.0,
+      "peak": 0.420013427734375,
+      "saturated_sample_fraction": 0.0
+    }
+  ],
+  "voice": "af_heart",
+  "auditory_review": "Not independently auditioned by a human; preset alternatives provided for user review.",
+  "duration_seconds": 236.2,
+  "all_speech_inside_own_scene": true
+}

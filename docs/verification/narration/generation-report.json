@@ -1,0 +1,147 @@
+{
+  "engine": "kokoro-onnx",
+  "model": "Kokoro-82M v1.0 ONNX",
+  "execution": "CPU; batch; two-core affinity; Python network connections disabled",
+  "voice": "af_heart",
+  "sample_rate": 24000,
+  "auditions": [
+    {
+      "voice": "af_heart",
+      "seconds": 17.288,
+      "generation_seconds": 8.435999155975878
+    },
+    {
+      "voice": "af_bella",
+      "seconds": 17.512666666666668,
+      "generation_seconds": 8.510590109974146
+    },
+    {
+      "voice": "bm_george",
+      "seconds": 17.844,
+      "generation_seconds": 8.411564219044521
+    }
+  ],
+  "segments": [
+    {
+      "scene": 1,
+      "seconds": 9.743291666666666,
+      "generation_seconds": 4.725363386038225,
+      "window_seconds": 12,
+      "peak": 0.4238894283771515,
+      "rms": 0.06067133694887161
+    },
+    {
+      "scene": 2,
+      "seconds": 14.665333333333333,
+      "generation_seconds": 7.117268456961028,
+      "window_seconds": 20.0,
+      "peak": 0.4738813638687134,
+      "rms": 0.06148006021976471
+    },
+    {
+      "scene": 3,
+      "seconds": 13.715333333333334,
+      "generation_seconds": 6.551269734045491,
+      "window_seconds": 16.0,
+      "peak": 0.49114346504211426,
+      "rms": 0.06175035610795021
+    },
+    {
+      "scene": 4,
+      "seconds": 12.947333333333333,
+      "generation_seconds": 6.1123266410431825,
+      "window_seconds": 16.0,
+      "peak": 0.4043720066547394,
+      "rms": 0.060638248920440674
+    },
+    {
+      "scene": 5,
+      "seconds": 10.144,
+      "generation_seconds": 4.847284985997248,
+      "window_seconds": 14.0,
+      "peak": 0.3791109025478363,
+      "rms": 0.06052009388804436
+    },
+    {
+      "scene": 6,
+      "seconds": 10.121333333333334,
+      "generation_seconds": 4.8119077699957415,
+      "window_seconds": 12.0,
+      "peak": 0.5090441703796387,
+      "rms": 0.05994141101837158
+    },
+    {
+      "scene": 7,
+      "seconds": 12.426666666666666,
+      "generation_seconds": 5.928325226996094,
+      "window_seconds": 16.0,
+      "peak": 0.46377748250961304,
+      "rms": 0.06013207882642746
+    },
+    {
+      "scene": 8,
+      "seconds": 14.912666666666667,
+      "generation_seconds": 7.014277036010753,
+      "window_seconds": 18.0,
+      "peak": 0.43350479006767273,
+      "rms": 0.060357946902513504
+    },
+    {
+      "scene": 9,
+      "seconds": 15.699333333333334,
+      "generation_seconds": 7.49483570700977,
+      "window_seconds": 17.999999999999986,
+      "peak": 0.48470208048820496,
+      "rms": 0.06137332320213318
+    },
+    {
+      "scene": 10,
+      "seconds": 14.318666666666667,
+      "generation_seconds": 6.663672547030728,
+      "window_seconds": 16.0,
+      "peak": 0.5020797848701477,
+      "rms": 0.06045297533273697
+    },
+    {
+      "scene": 11,
+      "seconds": 13.161958333333333,
+      "generation_seconds": 6.262509951018728,
+      "window_seconds": 16.0,
+      "peak": 0.4139948785305023,
+      "rms": 0.06095198169350624
+    },
+    {
+      "scene": 12,
+      "seconds": 14.046666666666667,
+      "generation_seconds": 7.077910322987009,
+      "window_seconds": 18.0,
+      "peak": 0.4860747754573822,
+      "rms": 0.06103939190506935
+    },
+    {
+      "scene": 13,
+      "seconds": 15.083333333333334,
+      "generation_seconds": 7.40866867499426,
+      "window_seconds": 18.0,
+      "peak": 0.44638246297836304,
+      "rms": 0.06254170089960098
+    },
+    {
+      "scene": 14,
+      "seconds": 9.000666666666667,
+      "generation_seconds": 4.5854381620301865,
+      "window_seconds": 14.0,
+      "peak": 0.3826647996902466,
+      "rms": 0.059647850692272186
+    },
+    {
+      "scene": 15,
+      "seconds": 9.610666666666667,
+      "generation_seconds": 4.761652317014523,
+      "window_seconds": 12.0,
+      "peak": 0.4200149178504944,
+      "rms": 0.06133022531867027
+    }
+  ],
+  "total_generation_seconds": 133.6497086759773
+}

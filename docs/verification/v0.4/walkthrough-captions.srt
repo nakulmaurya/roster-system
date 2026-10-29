@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:12,000
+Roster Studio | A real, database-backed operations planning workspace.
+
+2
+00:00:12,005 --> 00:00:32,005
+Try demo creates an isolated PostgreSQL workspace with 30 fictional employees.
+
+3
+00:00:32,007 --> 00:00:48,007
+Calendars are month-aware: February 2028 includes leap day.
+
+4
+00:00:48,009 --> 00:01:04,009
+Brand view distinguishes operating calendars from employee schedules.
+
+5
+00:01:04,009 --> 00:01:18,009
+Person view shows working days, time off and individual allocation.
+
+6
+00:01:18,012 --> 00:01:30,012
+Pod view groups resources under operational leads.
+
+7
+00:01:30,014 --> 00:01:46,014
+Process view includes bundled services that cover that process.
+
+8
+00:01:46,016 --> 00:02:04,016
+Eligibility is explicit. The scheduler never invents authorization.
+
+9
+00:02:04,020 --> 00:02:22,020
+Services expose operating calendars, staffing, timed shifts and timezone.
+
+10
+00:02:22,024 --> 00:02:38,024
+Catalog management supports people, brands, processes, pods and leads.
+
+11
+00:02:38,027 --> 00:02:54,027
+Simulate a real sole-primary absence after generation.
+
+12
+00:02:54,030 --> 00:03:12,030
+Coverage is revalidated immediately. Mandatory gaps block publication.
+
+13
+00:03:12,036 --> 00:03:30,036
+The assignment inspector explains eligibility and available replacements.
+
+14
+00:03:30,044 --> 00:03:44,044
+Humans authorize changes; automatic repair uses eligible resources only.
+
+15
+00:03:44,049 --> 00:03:56,049
+Assessment demo | Server persistence, validated changes, explicit limitations.

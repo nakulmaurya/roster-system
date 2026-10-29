@@ -1,0 +1,5 @@
+Created symlink '/etc/systemd/system/timers.target.wants/datastraw-roster-backup.timer' → '/etc/systemd/system/datastraw-roster-backup.timer'.
+active
+Backup mode=600 bytes=638678
+Restored workspaces=29
+Backup created and disposable database restore completed

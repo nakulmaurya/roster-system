@@ -1,0 +1,16 @@
+[Unit]
+Description=DATASTRAW isolated demo HTTPS tunnel
+After=network-online.target
+Wants=network-online.target
+[Service]
+Type=simple
+User=roster-tunnel
+ExecStart=/opt/roster/bin/cloudflared --no-autoupdate tunnel --url http://127.0.0.1:3400 --protocol http2 --edge-ip-version 4
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,7 @@
+Restart probe write acknowledged by PostgreSQL. Restart application, then run read.
+active
+Restart probe passed: server session, revision and saved data survived application restart.
+active
+active
+Application process survived database restart
+Restart probe passed: server session, revision and saved data survived application restart.
