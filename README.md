@@ -68,6 +68,8 @@ node --env-file=.env.local scripts/roster-migrate.mjs
 npm run dev
 ```
 
+Windows PowerShell users can use `Copy-Item .env.example .env.local` and `npm.cmd` instead of `cp` and `npm`. See [Windows/Linux setup and verification scope](docs/PORTABILITY.md).
+
 Open the exact `APP_ORIGIN` you configured and choose **Try the interactive demo**. Never commit `.env.local` or real credentials. Managed manager/viewer sign-in is optional for the demo; password hashing and server variables are documented in the [database/session setup guide](docs/deployment/postgresql-sessions.md).
 
 Production uses `npm run build` followed by `npm start`; use HTTPS and a matching exact origin. See [deployment operations](docs/deployment/OPERATIONS.md).
@@ -81,8 +83,10 @@ npm test
 npm run build
 # With a ready application server and installed Chromium:
 npx playwright install chromium
-PLAYWRIGHT_BASE_URL=http://127.0.0.1:3000 npm run test:e2e
+PLAYWRIGHT_BASE_URL=http://localhost:3000 npm run test:e2e
 ```
+
+Use the exact same origin for `APP_ORIGIN` and `PLAYWRIGHT_BASE_URL`; `localhost` and `127.0.0.1` are intentionally not interchangeable for the CSRF check.
 
 **Database safety:** real integration tests require `TEST_DATABASE_URL` pointing to a disposable database whose name includes `test` or `ci`. They truncate test tables. Never use the production database. Without that variable, database integration cases are visibly skipped. Viewer acceptance checks need the matching private test fixtures described in the setup guide.
 

@@ -13,13 +13,13 @@
 1. Open the public repository and demo links in a signed-out browser before sending.
 2. Add your correct accessible LinkedIn profile URL and full name.
 3. Review the video/source and be ready to explain modeling, constraints and trade-offs.
-4. Confirm the actual deadline and the incomplete CC address `talent@datastraw` in the supplied PDF. Do not guess an email domain.
+4. Confirm the actual deadline. The shortlist email explicitly confirms the complete HR address as `talent@datastraw.in`; do not reply to the automated Keka sender.
 5. Prefer stable HTTPS hosting over a temporary Quick Tunnel for the review period.
 
 ## Draft email — not sent
 
 To: ozair.shaikh@datastraw.in; aryan.jaiswal@datastraw.in
-CC: [verify complete talent address]
+CC: talent@datastraw.in
 Subject: Smart Roster Management System Assignment - [Your Full Name]
 
 Hello,
